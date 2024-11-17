@@ -1,0 +1,31 @@
+project:
+  type: website
+
+website:
+  title: " **Gergő Bocsárdi** | <sub> <sup> data science, networks & a sprinkle of chaos </sup> </sub>" 
+  favicon: resources/logo.png
+  description: "data science, networks & a sprinkle of chaos"
+
+
+  navbar:
+    # title: "Gergő Bocsárdi"
+    # style: "floating"
+    logo: resources/logo.png
+    search: true
+    # right:
+    #   - text: "My Story"
+    #     href: my-story.qmd 
+
+
+format:
+  html:
+    theme: cosmo
+    header-includes: |
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    mainfont: "Roboto Slab"
+    css: styles.css
+
+
+
