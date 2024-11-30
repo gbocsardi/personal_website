@@ -1,10 +1,13 @@
 name: Publish to FTP
 
 on:
+  # Triggers on both manual run and when gh-pages is updated
+  workflow_dispatch:
+  page_build:
+  # Also catch direct pushes to gh-pages if they happen
   push:
     branches:
       - gh-pages
-  workflow_dispatch:
 
 jobs:
   ftp-deploy:
