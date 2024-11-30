@@ -1,0 +1,100 @@
+/* css styles */
+.add-space{
+    padding-right: 11%;
+    }
+    
+/*-- scss:defaults --*/
+
+// Define the primary colors from the provided values
+$deco: #D6DB92;
+$woodland: #465622;
+
+// Define complementary colors for better contrast and readability
+$light-deco: lighten($deco, 15%);
+$dark-woodland: darken($woodland, 10%);
+
+// Set up semantic color variables
+$primary: $woodland;
+$secondary: $deco;
+$body-bg: white;
+$body-color: #2c2c2c;
+$link-color: $woodland;
+$navbar-bg: $woodland;
+$navbar-fg: $deco;
+$footer-bg: $woodland;
+$footer-fg: $deco;
+
+/*-- scss:rules --*/
+
+// Navigation styling
+.navbar {
+  border-bottom: 1px solid $deco;
+  
+  .nav-link {
+    color: $navbar-fg !important;
+    
+    &:hover {
+      color: $light-deco !important;
+    }
+  }
+}
+
+// Links and buttons
+a {
+  &:hover {
+    color: mix($link-color, black, 80%);
+    text-decoration: underline;
+  }
+}
+
+.btn-primary {
+  background-color: $woodland;
+  border-color: $woodland;
+  
+  &:hover {
+    background-color: $dark-woodland;
+    border-color: $dark-woodland;
+  }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $woodland;
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid $deco;
+  padding-left: 1rem;
+}
+
+// Code blocks
+pre {
+  border-left: 4px solid $deco;
+}
+
+// Footer
+footer {
+  background-color: $footer-bg;
+  color: $footer-fg;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+// Custom classes for your colors
+.bg-deco {
+  background-color: $deco;
+}
+
+.bg-woodland {
+  background-color: $woodland;
+  color: white;
+}
+
+.text-woodland {
+  color: $woodland;
+}
+
+.text-deco {
+  color: $deco;
+}
