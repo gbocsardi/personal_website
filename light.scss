@@ -1,0 +1,53 @@
+/*-- scss:defaults --*/
+// Base colors
+$deco: #D6DB92;
+$woodland: #465622;
+$ocher: #C68E17;
+
+// Main colors
+$body-bg: mix($deco, white, 5%) !default; // Light background
+$body-color: $woodland !default;
+$link-color: $ocher !default;
+$selection-bg: rgba($woodland, 0.2) !default;
+
+// Navigation
+$navbar-bg: mix($deco, white, 5%) !default; // Light header background
+$navbar-fg: $woodland !default; // Dark text for header
+$navbar-hl: darken($woodland, 10%) !default; // Darker hover state
+
+// Code blocks
+$code-block-bg: mix($deco, white, 30%) !default;
+$code-block-border-left: $woodland !default;
+
+// TOC
+$toc-active-border: $woodland !default;
+$toc-inactive-border: lighten($woodland, 20%) !default;
+
+// Heading colors
+$headings-color: mix($woodland, $deco, 100%) !default;
+
+/*-- scss:rules --*/
+.navbar {
+  border-bottom: 1px solid $woodland;
+  background-color: $navbar-bg !important;
+  
+  .nav-link {
+    color: $woodland !important;
+    &:hover {
+      color: darken($woodland, 15%) !important;
+    }
+  }
+  
+  .navbar-title {
+    color: $woodland !important;
+    font-weight: 600;
+  }
+}
+
+pre {
+  border-left: 3px solid $woodland;
+}
+
+.nav-footer {
+  border-top: 1px solid $woodland;
+}

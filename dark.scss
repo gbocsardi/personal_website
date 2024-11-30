@@ -1,0 +1,53 @@
+/*-- scss:defaults --*/
+// Base colors
+$deco: #D6DB92;
+$woodland: #465622;
+$ocher: #C68E17;
+
+// Main colors
+$body-bg: mix($woodland, black, 35%) !default;  // Softer dark background
+$body-color: mix($deco, white, 85%) !default;   // Slightly muted text
+$link-color: lighten($ocher, 15%) !default;     // Brightened ocher for visibility
+$selection-bg: rgba($deco, 0.2) !default;
+
+// Navigation
+$navbar-bg: mix($woodland, black, 35%) !default;  // Slightly darker than body
+$navbar-fg: mix($deco, white, 90%) !default;     // Slightly muted text
+$navbar-hl: lighten($deco, 10%) !default;
+
+// Code blocks
+$code-block-bg: mix($woodland, black, 75%) !default;  // Darker than body
+$code-block-border-left: $deco !default;
+
+// TOC
+$toc-active-border: $deco !default;
+$toc-inactive-border: mix($deco, $woodland, 50%) !default;
+
+// Heading colors
+$headings-color: mix($deco, white, 95%) !default;  // Almost pure Deco
+
+/*-- scss:rules --*/
+.navbar {
+  border-bottom: 1px solid $deco;
+  background-color: $navbar-bg !important;
+  
+  .nav-link {
+    color: $navbar-fg !important;
+    &:hover {
+      color: lighten($deco, 15%) !important;
+    }
+  }
+  
+  .navbar-title {
+    color: $navbar-fg !important;
+    font-weight: 600;
+  }
+}
+
+pre {
+  border-left: 3px solid $deco;
+}
+
+.nav-footer {
+  border-top: 1px solid $deco;
+}
