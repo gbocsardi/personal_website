@@ -16,11 +16,11 @@ title: "Hello there!"
 
 I’m Gergő. I’m from Hungary and I’m currently doing my PhD at [JADS](https://jads.nl) in the Netherlands.
 
-I love getting to know new people and places and immersing myself in a new culture.
-
 Here you will mostly find my thoughts about things I find interesting, be it personal or professional. I like to think the spice of life is following my curiosity, so if you find the topics chaotic, you have been warned.
 
-I also have degrees in mathematics and data science, the skills from which I try to apply to the most random stuff.
+Find out more about [my research here](research.qmd)!
+
+
 
 
 

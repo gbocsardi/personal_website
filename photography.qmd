@@ -1,0 +1,29 @@
+---
+title: "Photography"
+---
+
+I was always disproportionately drawn to cameras. The tactile feel, the "gadget-y-ness", the joy of freezing a snapshot of time. It took me quite a while to take the leap and invest in a nice camera (a Fujifilm X-S20), but it was one of the best investments I have ever made.
+
+Looking through the pictures of friends and family over the time since I had this camera, my only regret is not buying it earlier.
+
+### EDC Experiment
+I am currently experimenting with _always_ carrying a camera. 
+
+
+::: {.callout-note title="As Matt Stuart said in [Think Like a Street Photographer](https://g.co/kgs/BHeEuqe):" appearance="simple"}
+"If you don't have a camera on you at all times... you're just someone who saw some stuff and told people about what you saw."
+:::
+
+![My pride and joy, the GM1](resources/gm1.jpeg){fig-align="left" width=60%}
+
+This little setup is the smallest interchangeable camera ever made, and I paired it with the smallest AF lens for the M43 system, resulting in this absolute cutie of a camera. Still shoots 16MP raw files, about 20MB each! :D
+
+### Videos
+Below you can find a few rambles about photography.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XQbPhwG9BOo?si=Uih9q_Bi6B5KLEAa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQ6QqKUIW4M?si=bUkRGQQMH4BUFlIK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+

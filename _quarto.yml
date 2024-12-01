@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: " **Gergő Bocsárdi** | <sub> <sup> data science, networks & a sprinkle of chaos </sup> </sub>" 
+  title: " Gergő Bocsárdi | <sub> <sup> data science, networks & a sprinkle of chaos </sup> </sub>" 
   favicon: resources/logo.png
   description: "data science, networks & a sprinkle of chaos"
 
@@ -11,6 +11,13 @@ website:
     # title: "Gergő Bocsárdi"
     # style: "floating"
     logo: resources/logo.png
+    tools:
+      - icon: share
+        href: https://bsky.app/profile/agbocsardi.com
+      - icon: instagram
+        href: https://www.instagram.com/gergo.jpeg/
+      - icon: youtube
+        href: https://www.youtube.com/@agbocsardi
 
     # search: true
 
@@ -18,22 +25,22 @@ website:
     style: "floating"
     search: true
     contents:
-      - section: "Basics"
-        # href: basics-summary.qmd
+      - section: "Get to know me"
         contents:
-          # - index.qmd
-          # - basics-jupyter.qmd
+          - photography.qmd
+          # - coffee.qmd
       - section: "Research"
         contents:
-          # - layout.qmd
+          - research.qmd
+          # - publications.qmd
 
 
 format:
   html:
     theme:
-      light: [default, light.scss]
-      dark: [default, dark.scss]
-    css: styles.css
+      light: [default, resources/style/light.scss]
+      dark: [default, resources/style/dark.scss]
+    css: resources/style/styles.css
     header-includes: |
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

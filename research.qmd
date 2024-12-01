@@ -1,0 +1,14 @@
+---
+title: "About my research"
+listing:
+  id: research-listing
+  contents: posts
+  include:
+    category: research
+---
+
+I am endlessly fascinated by graphs and networks, and my PhD projects explores using them in the field of management! 
+
+::: {#research-listing}
+:::
+
