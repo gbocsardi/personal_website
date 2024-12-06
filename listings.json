@@ -1,7 +1,10 @@
 [
   {
     "listing": "/blog.html",
-    "items": []
+    "items": [
+      "/posts/local-llms/index.html",
+      "/posts/obsidian-ollama/index.html"
+    ]
   },
   {
     "listing": "/research.html",

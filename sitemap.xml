@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://agbocsardi.github.io/personal_website/blog.html</loc>
-    <lastmod>2024-11-17T13:42:57.901Z</lastmod>
-  </url>
-  <url>
-    <loc>https://agbocsardi.github.io/personal_website/index.html</loc>
-    <lastmod>2024-12-06T18:56:13.666Z</lastmod>
-  </url>
-  <url>
-    <loc>https://agbocsardi.github.io/personal_website/coffee.html</loc>
-    <lastmod>2024-12-01T14:00:07.245Z</lastmod>
-  </url>
-  <url>
-    <loc>https://agbocsardi.github.io/personal_website/obsidian-ollama.html</loc>
-    <lastmod>2024-12-06T19:15:31.249Z</lastmod>
-  </url>
-  <url>
-    <loc>https://agbocsardi.github.io/personal_website/research.html</loc>
-    <lastmod>2024-12-01T15:09:14.529Z</lastmod>
-  </url>
-  <url>
-    <loc>https://agbocsardi.github.io/personal_website/photography.html</loc>
-    <lastmod>2024-12-01T15:07:36.685Z</lastmod>
+    <lastmod>2024-12-06T19:57:57.019Z</lastmod>
   </url>
   <url>
     <loc>https://agbocsardi.github.io/personal_website/my-story.html</loc>
     <lastmod>2024-11-17T14:26:14.586Z</lastmod>
   </url>
   <url>
-    <loc>https://agbocsardi.github.io/personal_website/local-llms.html</loc>
-    <lastmod>2024-12-06T18:50:07.771Z</lastmod>
+    <loc>https://agbocsardi.github.io/personal_website/photography.html</loc>
+    <lastmod>2024-12-01T15:07:36.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://agbocsardi.github.io/personal_website/posts/local-llms/index.html</loc>
+    <lastmod>2024-12-06T20:00:17.255Z</lastmod>
+  </url>
+  <url>
+    <loc>https://agbocsardi.github.io/personal_website/research.html</loc>
+    <lastmod>2024-12-01T15:09:14.529Z</lastmod>
+  </url>
+  <url>
+    <loc>https://agbocsardi.github.io/personal_website/posts/obsidian-ollama/index.html</loc>
+    <lastmod>2024-12-06T20:00:58.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://agbocsardi.github.io/personal_website/coffee.html</loc>
+    <lastmod>2024-12-01T14:00:07.245Z</lastmod>
+  </url>
+  <url>
+    <loc>https://agbocsardi.github.io/personal_website/index.html</loc>
+    <lastmod>2024-12-06T19:42:47.270Z</lastmod>
   </url>
 </urlset>
