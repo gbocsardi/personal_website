@@ -1,13 +1,25 @@
 ---
 title: "Chat with your Obsidian vault!"
+description: "It's time to start talking to your Obsidian notes."
+
+date: "2024.12.06"
+date-modified: "2024.12.06"
+
+categories:
+  - notetaking
+  - howto
+
 format:
   html:
     toc: true
     code-overflow: wrap
+
+aliases: 
+    - /obsidian-ollama.html
 ---
 
 
-In [my previous post](local-llms.qmd) I outlined how to set up Ollama and Continue to create a Copilot-like experience entirely local. The main focus of that article was coding, but I have a second usecase for this stack, that is much more exciting.
+In [my previous post](/posts/local-llms/index.qmd) I outlined how to set up Ollama and Continue to create a Copilot-like experience entirely local. The main focus of that article was coding, but I have a second usecase for this stack, that is much more exciting.
 
 ## Motivation
 
@@ -15,7 +27,7 @@ The motivation behind this integration is that all my notes are stored in Obsidi
 
 I realized that I can use Continue's [Context Selection](https://docs.continue.dev/chat/context-selection) tools to equip a local LLM with the info from my notes!
 
-I will assume that you followed all the steps from the [previous post](local-llms.qmd), and have a working Ollama + Continue stack in VSCode, alongside an Obsidian vault you want to talk to.
+I will assume that you followed all the steps from the [previous post](/posts/local-llms/index.qmd), and have a working Ollama + Continue stack in VSCode, alongside an Obsidian vault you want to talk to.
 
 This post is going the be a brief demo of some of the features I think are the coolest usecases. I am quite new to this myself, so if you have other usecases, I'd love to hear!
 
@@ -30,7 +42,7 @@ Then navigate to your detailed Continue options, either through the three dots b
 
 
 The magic happens in the `@codebase` index:
-![](resources/Ollama%20meets%20Obsidian-1.png){width=80%}
+![](Ollama%20meets%20Obsidian-1.png){width=80%}
 
 This is where you can create an index of your entire "codebase", in our case, your Obsidian vault. Once you indexed it, it has created a locally stored embedding of all your notes.
 
@@ -44,16 +56,17 @@ A few notable ones:
 
 This way you can reference any file in your vault, and pass it on as context. Particularly useful when you want to give an example file to the model to work from:
 
-![](resources/Ollama%20meets%20Obsidian-2.png){width=80%}
+![](Ollama%20meets%20Obsidian-2.png){width=80%}
 
 ### `@Folder`
 Pass an entire folder as context! I like to use this in conjunction with my literature notes from Zotero, to find my my notes on papers that talk about a given topic:
 
-![](resources/Ollama%20meets%20Obsidian-3.png){width=80%}
+![](Ollama%20meets%20Obsidian-3.png){width=80%}
 
 ### `@Codebase`
 You can invoke this by sending a chat message with `cmd+Enter` in the chat window. Using this, the model will look through your entire indexed codebase to use for the answer. Important to keep in mind, that this doesn't use the entire codebase as context: rather, it retrieves the files that it deems most useful, and uses those as direct context for the model reply. 
-![](resources/Ollama%20meets%20Obsidian-4.png){width=80%}
+
+![](Ollama%20meets%20Obsidian-4.png){width=80%}
 
 A few examples for usecases can be found at the [Continue docs about @Codebase](https://docs.continue.dev/customize/deep-dives/codebase), but en general this tool is more for high level overviews rather than "find every typo in my codebase" type of tasks.
 

@@ -1,12 +1,22 @@
 ---
 title: "How I Run Local LLMs"
+description: "In this article I show you how I set up local LLMs in VSCode. We'll use them for code completion and chat, right inside your code editor."
+
+date: "2024.12.06"
+date-modified: "2024.12.06"
+
+categories:
+  - notetaking
+  - howto
+
 format:
   html:
     code-overflow: wrap
+
+aliases: 
+  - /local-llms.html
 ---
 
-
-In this article I'm going to show you how to set up your own local LLMs. We'll use them for code completion and chat, right inside your code editor.
 
 
 ## Why bother setting this up

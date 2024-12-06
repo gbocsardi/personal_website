@@ -32,9 +32,9 @@ website:
       - section: "Check out my work"
         contents:
           - research.qmd
-          - local-llms.qmd
-          - obsidian-ollama.qmd
+          - blog.qmd
           # - publications.qmd
+          
 
 
 format:
