@@ -47,7 +47,7 @@
     "href": "obsidian-ollama.html#setup",
     "title": "Chat with your Obsidian vault!",
     "section": "Setup",
-    "text": "Setup\nFirst and foremost, open up your Obsidian vault’s folder in VSCode.\nI recommend turning code completion off for this (Continue: Toggle Autocomplete in the command palette), since Continue will try to “complete” any text you write :D\nThen navigate to your detailed Continue options, either through the three dots besides the cog in the chat window, or open your command palette (cmd+shift+P) and type Continue: More. \nThe magic happens in the @codebase index: \nThis is where you can create an index of your entire “codebase”, in our case, your Obsidian vault. Once you indexed it, it has created a locally stored embedding of all your notes.",
+    "text": "Setup\nFirst and foremost, open up your Obsidian vault’s folder in VSCode.\nI recommend turning code completion off for this (Continue: Toggle Autocomplete in the command palette), since Continue will try to “complete” any text you write :D\nThen navigate to your detailed Continue options, either through the three dots besides the cog in the chat window, or open your command palette (cmd+shift+P) and type Continue: More.\nThe magic happens in the @codebase index: \nThis is where you can create an index of your entire “codebase”, in our case, your Obsidian vault. Once you indexed it, it has created a locally stored embedding of all your notes.",
     "crumbs": [
       "Check out my work",
       "Chat with your Obsidian vault!"
