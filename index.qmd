@@ -22,7 +22,5 @@ Find out more about [my research here](research.qmd)!
 
 
 
-
-
 :::
 
