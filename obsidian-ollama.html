@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>gbocsardi_quarto – Gergő Bocsárdi |   data science, networks &amp; a sprinkle of chaos  </title>
+<title>Chat with your Obsidian vault! – Gergő Bocsárdi |   data science, networks &amp; a sprinkle of chaos  </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,8 +65,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./resources/logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -42,8 +74,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-474c6d7e63be50eb6972897072b39b27.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1619497a8a70fe4415a6e5bd2f34c5bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-d05bf6df5175d0211de05c0b9843d977.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-fb20edb3ef6f0ae111e897a6f63fba33.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-bb223144eaf9f803654af5abaa52b70d.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,68 +103,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&amp;family=Roboto+Slab:wght@100..900&amp;display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="resources/style/styles.css">
 </head>
@@ -140,7 +114,7 @@ window.Quarto = {
 <body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -165,7 +139,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">gbocsardi_quarto</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./research.html">Check out my work</a></li><li class="breadcrumb-item"><a href="./obsidian-ollama.html">Chat with your Obsidian vault!</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -175,23 +149,7 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">gbocsardi_quarto</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-body">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -241,7 +199,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./obsidian-ollama.html" class="sidebar-item-text sidebar-link">
+  <a href="./obsidian-ollama.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Chat with your Obsidian vault!</span></a>
   </div>
 </li>
@@ -253,27 +211,125 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How it works</a>
+  <ul class="collapse">
+  <li><a href="#file" id="toc-file" class="nav-link" data-scroll-target="#file"><code>@File</code></a></li>
+  <li><a href="#folder" id="toc-folder" class="nav-link" data-scroll-target="#folder"><code>@Folder</code></a></li>
+  <li><a href="#codebase" id="toc-codebase" class="nav-link" data-scroll-target="#codebase"><code>@Codebase</code></a></li>
+  </ul></li>
+  <li><a href="#how-to-tweak" id="toc-how-to-tweak" class="nav-link" data-scroll-target="#how-to-tweak">How to tweak</a>
+  <ul class="collapse">
+  <li><a href="#customise-rag" id="toc-customise-rag" class="nav-link" data-scroll-target="#customise-rag">Customise RAG</a></li>
+  <li><a href="#custom-slash-commands" id="toc-custom-slash-commands" class="nav-link" data-scroll-target="#custom-slash-commands">Custom slash-commands</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./research.html">Check out my work</a></li><li class="breadcrumb-item"><a href="./obsidian-ollama.html">Chat with your Obsidian vault!</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chat with your Obsidian vault!</h1>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In <a href="Local LLMs with Ollama 1.qmd">my previous post</a> I outlined how to set up Ollama and Continue to create a Copilot-like experience entirely local. The main focus of that article was coding, but I have a second usecase for this stack, that is much more exciting.</p>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>The motivation behind this integration is that all my notes are stored in Obsidian, in plain old Markdown format. This simplicity has a significant advantage: I can interact with them programmatically. For instance, I can change the formatting of all my notes on a whim (hello/goodbye Zettelkasten) or perform other custom actions on them.</p>
+<p>I realized that I can use Continue’s <a href="https://docs.continue.dev/chat/context-selection">Context Selection</a> tools to equip a local LLM with the info from my notes!</p>
+<p>I will assume that you followed all the steps from the <a href="Local LLMs with Ollama 1.qmd">previous post</a>, and have a working Ollama + Continue stack in VSCode, alongside an Obsidian vault you want to talk to.</p>
+<p>This post is going the be a brief demo of some of the features I think are the coolest usecases. I am quite new to this myself, so if you have other usecases, I’d love to hear!</p>
+</section>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<p>First and foremost, open up your Obsidian vault’s folder in VSCode.</p>
+<p>I recommend turning code completion off for this (<code>Continue: Toggle Autocomplete</code> in the command palette), since Continue will try to “complete” any text you write :D</p>
+<p>Then navigate to your detailed Continue options, either through the three dots besides the cog in the chat window, or open your command palette (<code>cmd+shift+P</code>) and type <code>Continue: More</code>. ![[Ollama meets Obsidian.png]]</p>
+<p>The magic happens in the <code>@codebase</code> index: ![[Ollama meets Obsidian-1.png]]</p>
+<p>This is where you can create an index of your entire “codebase”, in our case, your Obsidian vault. Once you indexed it, it has created a locally stored embedding of all your notes.</p>
+</section>
+<section id="how-it-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-works">How it works</h2>
+<p>From here on, you can use any of the <a href="https://docs.continue.dev/chat/context-selection">Context Selection</a> tools in Continue to work from.</p>
+<p>A few notable ones:</p>
+<section id="file" class="level3">
+<h3 class="anchored" data-anchor-id="file"><code>@File</code></h3>
+<p>This way you can reference any file in your vault, and pass it on as context. Particularly useful when you want to give an example file to the model to work from: ![[Ollama meets Obsidian-2.png]]</p>
+</section>
+<section id="folder" class="level3">
+<h3 class="anchored" data-anchor-id="folder"><code>@Folder</code></h3>
+<p>Pass an entire folder as context! I like to use this in conjunction with my literature notes from Zotero, to find my my notes on papers that talk about a given topic: ![[Ollama meets Obsidian-3.png]]</p>
+</section>
+<section id="codebase" class="level3">
+<h3 class="anchored" data-anchor-id="codebase"><code>@Codebase</code></h3>
+<p>You can invoke this by sending a chat message with <code>cmd+Enter</code> in the chat window. Using this, the model will look through your entire indexed codebase to use for the answer. Important to keep in mind, that this doesn’t use the entire codebase as context: rather, it retrieves the files that it deems most useful, and uses those as direct context for the model reply. ![[Ollama meets Obsidian-4.png]]</p>
+<p>A few examples for usecases can be found at the <a href="https://docs.continue.dev/customize/deep-dives/codebase">Continue docs about <span class="citation" data-cites="Codebase">@Codebase</span></a>, but en general this tool is more for high level overviews rather than “find every typo in my codebase” type of tasks.</p>
+</section>
+</section>
+<section id="how-to-tweak" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-tweak">How to tweak</h2>
+<section id="customise-rag" class="level3">
+<h3 class="anchored" data-anchor-id="customise-rag">Customise RAG</h3>
+<p>You can customize some of the RAG behavior through your <code>config.json</code>. Detailed descriptions can be found <a href="https://docs.continue.dev/customize/deep-dives/codebase#configuration">at the docs</a>, but the gist is that when using folders or the codebase as context, Continue retrieves a larger number of relevant documents initially, then reranks them to find the the most fitting ones, and uses those as context. This way it “narrows down” the request twice, focusing only on the most relevant files.</p>
+<p>One of the reasons for this is to conserve as much of the context window (previous chats, your input, etc), but whether this tradeoff is worth it for you, you can decide yourself. By tweaking some of the parameters, you can adjust this behavior nicely (even separately for <code>@Folder</code> and <code>@Codebase</code>)!</p>
+</section>
+<section id="custom-slash-commands" class="level3">
+<h3 class="anchored" data-anchor-id="custom-slash-commands">Custom slash-commands</h3>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</div></main> <!-- /main -->
+<div class="callout-title-container flex-fill">
+Under construction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At the time of writing (2024.12.06) I couldn’t figure out how to get the responses from the LLM into the chat window properly. I’m not sure if I’m missing something, or if it’s a bug with Continue, will update as I learn more.</p>
+</div>
+</div>
+<p>A cool tool is what they call <a href="https://docs.continue.dev/customize/slash-commands">“slash-commands”</a>. These are shorthands you can use in the chat to use templated prompts for specific purposes, such as <code>/share</code> which exports your chat conversation to a markdown file, or <code>/test</code> which writes unit tests for your selected function.</p>
+<p>Continue enables you to fully <a href="https://docs.continue.dev/customize/slash-commands">customize your slash commands</a>. This means you can define your own shorthands!</p>
+<p>One of my workflows is writing nested bulletpoint lists as drafts for documents, this helps me figure out my thinking, and quickly reorganize them as needed. However, after the draft is done, there is still the task of writing that out as text. I like to use LLMs to generate a first version of text, that I can start editing to my taste.</p>
+<p>Here’s a custom command that enables me to very quickly expand bulletpoints to sentences:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="er">customCommands=</span><span class="ot">[</span><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"name"</span><span class="fu">:</span> <span class="st">"expand"</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"Expand selection to paragraphs"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"prompt"</span><span class="fu">:</span> <span class="st">"{{{ input }}}</span><span class="ch">\n\n</span><span class="st">Please read the highlighted bulletpoints and expand them into fluid text. You should always respect the indentation in nested lists as hierarchy in the text. </span><span class="ch">\n</span><span class="st">You should always stick to factual information in the bulletpoints. </span><span class="ch">\n</span><span class="st">Make sure the tone of the text you write is coherent with the rest of the document."</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>I think this opens up a world of possibilities when it comes to interacting with your notes! I found that this is quite a natural way for me to intergrate LLMs with my Obsidian notes, and I’m only getting started!</p>
+<p>Let me know if this sparked any ideas, and happy tinkering!</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
