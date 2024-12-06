@@ -254,20 +254,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In <a href="Local LLMs with Ollama 1.qmd">my previous post</a> I outlined how to set up Ollama and Continue to create a Copilot-like experience entirely local. The main focus of that article was coding, but I have a second usecase for this stack, that is much more exciting.</p>
+<p>In <a href="./local-llms.html">my previous post</a> I outlined how to set up Ollama and Continue to create a Copilot-like experience entirely local. The main focus of that article was coding, but I have a second usecase for this stack, that is much more exciting.</p>
 <section id="motivation" class="level2">
 <h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
 <p>The motivation behind this integration is that all my notes are stored in Obsidian, in plain old Markdown format. This simplicity has a significant advantage: I can interact with them programmatically. For instance, I can change the formatting of all my notes on a whim (hello/goodbye Zettelkasten) or perform other custom actions on them.</p>
 <p>I realized that I can use Continue’s <a href="https://docs.continue.dev/chat/context-selection">Context Selection</a> tools to equip a local LLM with the info from my notes!</p>
-<p>I will assume that you followed all the steps from the <a href="Local LLMs with Ollama 1.qmd">previous post</a>, and have a working Ollama + Continue stack in VSCode, alongside an Obsidian vault you want to talk to.</p>
+<p>I will assume that you followed all the steps from the <a href="./local-llms.html">previous post</a>, and have a working Ollama + Continue stack in VSCode, alongside an Obsidian vault you want to talk to.</p>
 <p>This post is going the be a brief demo of some of the features I think are the coolest usecases. I am quite new to this myself, so if you have other usecases, I’d love to hear!</p>
 </section>
 <section id="setup" class="level2">
 <h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <p>First and foremost, open up your Obsidian vault’s folder in VSCode.</p>
 <p>I recommend turning code completion off for this (<code>Continue: Toggle Autocomplete</code> in the command palette), since Continue will try to “complete” any text you write :D</p>
-<p>Then navigate to your detailed Continue options, either through the three dots besides the cog in the chat window, or open your command palette (<code>cmd+shift+P</code>) and type <code>Continue: More</code>. ![[Ollama meets Obsidian.png]]</p>
-<p>The magic happens in the <code>@codebase</code> index: ![[Ollama meets Obsidian-1.png]]</p>
+<p>Then navigate to your detailed Continue options, either through the three dots besides the cog in the chat window, or open your command palette (<code>cmd+shift+P</code>) and type <code>Continue: More</code>. <img src="resources/Ollama meets Obsidian.png" class="img-fluid"></p>
+<p>The magic happens in the <code>@codebase</code> index: <img src="resources/Ollama meets Obsidian-1.png" class="img-fluid"></p>
 <p>This is where you can create an index of your entire “codebase”, in our case, your Obsidian vault. Once you indexed it, it has created a locally stored embedding of all your notes.</p>
 </section>
 <section id="how-it-works" class="level2">
@@ -276,15 +276,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A few notable ones:</p>
 <section id="file" class="level3">
 <h3 class="anchored" data-anchor-id="file"><code>@File</code></h3>
-<p>This way you can reference any file in your vault, and pass it on as context. Particularly useful when you want to give an example file to the model to work from: ![[Ollama meets Obsidian-2.png]]</p>
+<p>This way you can reference any file in your vault, and pass it on as context. Particularly useful when you want to give an example file to the model to work from:</p>
+<p><img src="resources/Ollama meets Obsidian-2.png" class="img-fluid"></p>
 </section>
 <section id="folder" class="level3">
 <h3 class="anchored" data-anchor-id="folder"><code>@Folder</code></h3>
-<p>Pass an entire folder as context! I like to use this in conjunction with my literature notes from Zotero, to find my my notes on papers that talk about a given topic: ![[Ollama meets Obsidian-3.png]]</p>
+<p>Pass an entire folder as context! I like to use this in conjunction with my literature notes from Zotero, to find my my notes on papers that talk about a given topic:</p>
+<p><img src="resources/Ollama meets Obsidian-3.png" class="img-fluid"></p>
 </section>
 <section id="codebase" class="level3">
 <h3 class="anchored" data-anchor-id="codebase"><code>@Codebase</code></h3>
-<p>You can invoke this by sending a chat message with <code>cmd+Enter</code> in the chat window. Using this, the model will look through your entire indexed codebase to use for the answer. Important to keep in mind, that this doesn’t use the entire codebase as context: rather, it retrieves the files that it deems most useful, and uses those as direct context for the model reply. ![[Ollama meets Obsidian-4.png]]</p>
+<p>You can invoke this by sending a chat message with <code>cmd+Enter</code> in the chat window. Using this, the model will look through your entire indexed codebase to use for the answer. Important to keep in mind, that this doesn’t use the entire codebase as context: rather, it retrieves the files that it deems most useful, and uses those as direct context for the model reply. <img src="resources/Ollama meets Obsidian-4.png" class="img-fluid"></p>
 <p>A few examples for usecases can be found at the <a href="https://docs.continue.dev/customize/deep-dives/codebase">Continue docs about <span class="citation" data-cites="Codebase">@Codebase</span></a>, but en general this tool is more for high level overviews rather than “find every typo in my codebase” type of tasks.</p>
 </section>
 </section>
